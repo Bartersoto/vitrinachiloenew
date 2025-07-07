@@ -1,13 +1,13 @@
-// Configuración Firebase clásica (compatible con GitHub Pages)
-
+// Inicializa Firebase con tu config
 const firebaseConfig = {
-  apiKey: "AIzaSyDyjgJP0HV2PBoZsPaHWr8INtyDaFH6Bmo",
-  authDomain: "vitrinachiloenew.firebaseapp.com",
-  projectId: "vitrinachiloenew",
-  storageBucket: "vitrinachiloenew.firebasestorage.app",
-  messagingSenderId: "715706183231",
-  appId: "1:715706183231:web:b3d903858625bd5b17d28a"
+  apiKey: "TU_API_KEY",
+  authDomain: "TU_AUTH_DOMAIN",
+  projectId: "TU_PROJECT_ID",
+  storageBucket: "TU_STORAGE_BUCKET",
+  messagingSenderId: "TU_MESSAGING_SENDER_ID",
+  appId: "TU_APP_ID"
 };
 
 firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
 const db = firebase.firestore();

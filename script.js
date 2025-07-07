@@ -9,17 +9,13 @@ form.addEventListener('submit', async (e) => {
   const descripcion = document.getElementById('descripcion').value.trim();
   const contacto = document.getElementById('contacto').value.trim();
 
-  console.log("Datos del formulario:", { nombre, rubro, descripcion, contacto });
-
   if (!nombre || !rubro || !descripcion || !contacto) {
     alert("Por favor completa todos los campos.");
     return;
   }
 
   try {
-    const docRef = await db.collection('perfiles').add({ nombre, rubro, descripcion, contacto });
-    console.log("Documento agregado con ID:", docRef.id);
-
+    await db.collection('perfiles').add({ nombre, rubro, descripcion, contacto });
     form.reset();
     cargarPerfiles();
   } catch (error) {

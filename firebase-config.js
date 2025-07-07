@@ -1,3 +1,5 @@
+// Configuración Firebase clásica (compatible con GitHub Pages)
+
 const firebaseConfig = {
   apiKey: "AIzaSyDyjgJP0HV2PBoZsPaHWr8INtyDaFH6Bmo",
   authDomain: "vitrinachiloenew.firebaseapp.com",

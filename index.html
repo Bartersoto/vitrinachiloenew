@@ -14,7 +14,7 @@
     <input type="text" id="rubro" placeholder="Rubro o profesión" required />
     <textarea id="descripcion" placeholder="Descripción" required></textarea>
     <input type="text" id="contacto" placeholder="Correo o teléfono" required />
-    <!-- Imagen opcional -->
+    <!-- Imagen opcional (desactivada por ahora) -->
     <!-- <input type="file" id="imagen" accept="image/*" /> -->
     <button type="submit">Publicar</button>
   </form>
@@ -22,15 +22,15 @@
   <h2>Profesionales disponibles</h2>
   <div id="perfilesContainer"></div>
 
-  <!-- Firebase SDK CLÁSICO (v8.x) -->
+  <!-- Firebase SDK CLÁSICO (v8.x) - compatibles con GitHub Pages -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
 
-  <!-- Tu configuración Firebase -->
+  <!-- Configuración Firebase clásica -->
   <script src="firebase-config.js"></script>
 
-  <!-- Lógica de tu app -->
+  <!-- Lógica principal -->
   <script src="script.js"></script>
 </body>
 </html>

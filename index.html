@@ -1,24 +1,36 @@
-<h2>Registro</h2>
-<form id="registerForm">
-  <input type="email" id="regEmail" placeholder="Correo" required />
-  <input type="password" id="regPass" placeholder="Contraseña" required />
-  <button type="submit">Registrarse</button>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vitrina Chiloe</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Publica tu perfil profesional</h1>
 
-<h2>Login</h2>
-<form id="loginForm">
-  <input type="email" id="loginEmail" placeholder="Correo" required />
-  <input type="password" id="loginPass" placeholder="Contraseña" required />
-  <button type="submit">Ingresar</button>
-</form>
+  <form id="profileForm">
+    <input type="text" id="nombre" placeholder="Tu nombre" required />
+    <input type="text" id="rubro" placeholder="Rubro o profesión" required />
+    <textarea id="descripcion" placeholder="Descripción" required></textarea>
+    <input type="text" id="contacto" placeholder="Correo o teléfono" required />
+    <!-- Imagen opcional -->
+    <!-- <input type="file" id="imagen" accept="image/*" /> -->
+    <button type="submit">Publicar</button>
+  </form>
 
-<h2>Perfil</h2>
-<form id="profileForm" style="display:none;">
-  <input type="text" id="nombre" placeholder="Tu nombre" required />
-  <input type="text" id="rubro" placeholder="Rubro o profesión" required />
-  <textarea id="descripcion" placeholder="Descripción" required></textarea>
-  <input type="text" id="contacto" placeholder="Correo o teléfono" required />
-  <button type="submit">Guardar perfil</button>
-</form>
+  <h2>Profesionales disponibles</h2>
+  <div id="perfilesContainer"></div>
 
-<button id="logoutBtn" style="display:none;">Cerrar sesión</button>
+  <!-- Firebase SDK CLÁSICO (v8.x) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+  <!-- Tu configuración Firebase -->
+  <script src="firebase-config.js"></script>
+
+  <!-- Lógica de tu app -->
+  <script src="script.js"></script>
+</body>
+</html>
